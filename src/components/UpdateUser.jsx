@@ -159,7 +159,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
                         <img src={user.url} alt="userImage" width="100%" />
                       </Box>
                       <Box>
-                        <p>First Name: {user.first_name}</p>
+                        <p>In game Name (IGN): {user.first_name}</p>
                         <p>Email: {user.email}</p>
                         <p>Date of Birth:{user?.birthDate} </p>
                         <p>Gender: {user.gender_identity}</p>
@@ -175,7 +175,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
                         <img src={viewUser.url} alt="userImage" width="100%" />
                       </Box>
                       <Box>
-                        <p>First Name: {viewUser.first_name}</p>
+                        <p>In game Name (IGN): {viewUser.first_name}</p>
                         <p>Email: {viewUser.email}</p>
                         <p>Date of Birth:{viewUser?.birthDate} </p>
                         <p>Gender: {viewUser.gender_identity}</p>
