@@ -29,9 +29,12 @@ const Dashboard = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/user", {
-        params: { userId },
-      });
+      const response = await axios.get(
+        "https://getherbackend.onrender.com/user",
+        {
+          params: { userId },
+        }
+      );
       setUser(response.data);
     } catch (error) {
       console.log(error);
@@ -39,9 +42,12 @@ const Dashboard = () => {
   };
   const getGenderedUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/gendered-users", {
-        params: { gender: user?.gender_interest },
-      });
+      const response = await axios.get(
+        "https://getherbackend.onrender.com/gendered-users",
+        {
+          params: { gender: user?.gender_interest },
+        }
+      );
       setGenderedUsers(response.data);
     } catch (error) {
       console.log(error);

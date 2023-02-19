@@ -36,10 +36,13 @@ export default function BasicTable({
       if (matched !== undefined) {
         const userId = user.user_id;
         const matchedUserId = matched;
-        const match = await axios.put("http://localhost:8000/addmatch", {
-          userId,
-          matchedUserId,
-        });
+        const match = await axios.put(
+          "https://getherbackend.onrender.com/addmatch",
+          {
+            userId,
+            matchedUserId,
+          }
+        );
         matchRequest();
         setStatus("OK");
         setMatched();

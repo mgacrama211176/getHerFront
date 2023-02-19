@@ -42,7 +42,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
 
   const OnclickSelectedPairing = async () => {
     const fetched = await axios.get(
-      `http://localhost:8000/usersInfo/usersById/${selected}`
+      `https://getherbackend.onrender.com/usersInfo/usersById/${selected}`
     );
 
     fetched.data.map((user) => {
@@ -97,7 +97,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
   const OnClickUpdate = async () => {
     setLoading(true);
     const updateData = await axios.put(
-      `http://localhost:8000/admin/updateUser/${user.user_id}`,
+      `https://getherbackend.onrender.com/admin/updateUser/${user.user_id}`,
       newInfo
     );
     console.log(updateData);
@@ -112,7 +112,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
   const removeMatches = async () => {
     try {
       const process = await axios.get(
-        `http://localhost:8000/unmatch/${userId}/${selected}`
+        `https://getherbackend.onrender.com/unmatch/${userId}/${selected}`
       );
     } catch (err) {
       console.log(err);

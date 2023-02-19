@@ -17,7 +17,7 @@ const Verified = () => {
 
   const validated = async () => {
     const data = await axios.get(
-      `http://localhost:8000/validation/getUsers/${param.token}`
+      `https://getherbackend.onrender.com/validation/getUsers/${param.token}`
     );
     console.log(data);
   };
