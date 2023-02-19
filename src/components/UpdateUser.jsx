@@ -228,7 +228,7 @@ const UpdateUser = ({ user, userId, setUpdate }) => {
                   <TextField
                     id="first_name"
                     name="first_name"
-                    label="First Name"
+                    label="In game Name (IGN)"
                     defaultValue={user.first_name}
                     variant="standard"
                     onChange={(e) => onChangeHandle(e)}
