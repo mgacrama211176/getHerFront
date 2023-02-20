@@ -14,8 +14,8 @@ import axios from "axios";
 
 const style = {
   position: "absolute",
-  top: "20%",
-  left: "80%",
+  top: "10%",
+  left: "35%",
   transform: "translate(-50%, -50%)",
   width: 500,
   bgcolor: "background.paper",
@@ -47,9 +47,11 @@ export default function BasicModal({ user }) {
   };
 
   const AcceptMatch = async () => {
+    console.log(acceptedId);
+
     setLoader(true);
 
-    //accept match function with backend
+    // accept match function with backend
     if (acceptedId === "") {
       console.log(`try again!`);
       tryAgain();
@@ -86,7 +88,7 @@ export default function BasicModal({ user }) {
         sx={{
           position: "absolute",
           top: "30px",
-          right: "40px",
+          left: "500px",
           color: "white",
           fontSize: 100,
         }}
