@@ -7,6 +7,9 @@ import UserMatchTable from "../components/UserMatchTable";
 import TinderCard from "react-tinder-card";
 import { ToastContainer } from "react-toastify";
 
+//NOTIFICATION
+import Modal from "../components/notification/Modal";
+
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [genderedUsers, setGenderedUsers] = useState(null);
@@ -87,7 +90,6 @@ const Dashboard = () => {
         (genderedUser) => !matchedUserIds.includes(genderedUser.user_id)
       );
     filteredGenderedUsers();
-    console.log(filtered);
     setFiltered(filteredGenderedUsers);
   }, [matched, user, update]);
 
@@ -96,6 +98,9 @@ const Dashboard = () => {
   return (
     <>
       <ToastContainer />
+
+      <Modal user={user} />
+
       {user && (
         <div className="dashboard">
           <ChatContainer user={user} update={update} setUpdate={setUpdate} />

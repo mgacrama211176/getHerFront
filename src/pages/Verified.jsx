@@ -3,6 +3,7 @@ import { Container, Box, Paper } from "@mui/material";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import background from "../images/gethersplashpage2.gif";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -27,7 +28,16 @@ const Verified = () => {
   }, []);
 
   return (
-    <Container>
+    <Box
+      sx={{
+        backgroundImage: `url(${background})`,
+        height: "100%",
+        maxWidth: "100%",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        margin: 0,
+      }}
+    >
       <Box
         sx={{
           p: 2,
@@ -52,7 +62,7 @@ const Verified = () => {
           <br />
         </Item>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
