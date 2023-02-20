@@ -41,7 +41,7 @@ const Verified = () => {
       <Box
         sx={{
           p: 2,
-          bgcolor: "background.default",
+          bgcolor: "transparent",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

@@ -108,12 +108,12 @@ export default function BasicModal({ user }) {
           {notifications.length === 0 ? (
             <>
               <Typography id="modal-modal-title" variant="h6" component="h2">
-                No nofications available!
+                No notifications available!
               </Typography>
             </>
           ) : (
             <>
-              <Box>
+              <Box sx={{ overflowY: "scroll" }}>
                 {notifications.map((notification) => (
                   <>
                     <Box
@@ -136,7 +136,7 @@ export default function BasicModal({ user }) {
                         <CircularProgress />
                       ) : (
                         <>
-                          <Button
+                          {/* <Button
                             variant="outlined"
                             onClick={() => {
                               AcceptMatch();
@@ -144,7 +144,7 @@ export default function BasicModal({ user }) {
                             }}
                           >
                             Accept
-                          </Button>
+                          </Button> */}
                         </>
                       )}
                     </Box>
